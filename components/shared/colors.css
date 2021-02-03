@@ -1,0 +1,5 @@
+:root {
+    --bg-success: hsla(174, 100%, 29%, 100%);
+    --bg-primary: hsla(231, 49%, 47%, 100%);
+    --bg-error: hsla(5, 69%, 54%, 100%);
+}

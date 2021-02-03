@@ -1,0 +1,13 @@
+@keyframes depress {
+    from {
+        filter: brightness(0.75);
+    }
+}
+
+button:active {
+    animation: 450ms depress normal ease-out;
+}
+
+button:focus {
+    animation: 1s depress normal ease-out;
+}

@@ -1,0 +1,77 @@
+@import "./shared/resets.css";
+@import "./shared/colors.css";
+@import "./shared/typography.css";
+@import "./shared/animations.css";
+
+.button {
+    padding: 1rem;
+    margin: 1rem;
+    font-family: Roboto;
+    font-style: normal;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.04rem;
+    color: hsl(0, 0%, 100%);
+    text-rendering: auto;
+    box-shadow: 0px 0px 8px hsla(0, 0%, 0%, 0.12),
+        0px 8px 8px hsla(0, 0%, 0%, 0.24);
+    border-radius: 0.225rem;
+}
+
+.primary {
+    background: linear-gradient(
+            0deg,
+            hsla(0, 0%, 74%, 0.3),
+            hsla(0, 0%, 74%, 0.3)
+        ),
+        var(--bg-primary);
+    color: hsla(0, 0%, 100%, 100%);
+}
+
+.success {
+    background: linear-gradient(
+            0deg,
+            hsla(0, 0%, 74%, 0.3),
+            hsla(0, 0%, 74%, 0.3)
+        ),
+        var(--bg-success);
+    color: hsla(0, 0%, 100%, 100%);
+}
+
+.error {
+    background: linear-gradient(
+            0deg,
+            hsla(0, 0%, 74%, 0.3),
+            hsla(0, 0%, 74%, 0.3)
+        ),
+        var(--bg-error);
+    color: hsla(0, 0%, 100%, 100%);
+}
+
+/* Reset browser defaults */
+button {
+    appearance: unset;
+    writing-mode: unset !important;
+    -webkit-writing-mode: unset !important;
+    text-rendering: unset;
+    color: unset;
+    letter-spacing: unset;
+    word-spacing: unset;
+    text-transform: unset;
+    text-indent: unset;
+    text-shadow: unset;
+    display: unset;
+    text-align: unset;
+    align-items: unset;
+    cursor: unset;
+    background-color: unset;
+    box-sizing: unset;
+    margin: unset;
+    font: unset;
+    padding: unset;
+    border-width: unset;
+    border-style: unset;
+    border-color: unset;
+    border-image: unset;
+}
