@@ -1,5 +1,5 @@
 import React from "react";
-import classNames from "../lib/utils/classNames";
+import classNames from "../../lib/utils/classNames";
 import styles from "./Button.module.css";
 
 export interface ButtonProps {
@@ -7,7 +7,7 @@ export interface ButtonProps {
     color?: "success" | "primary" | "error";
 }
 
-const Button: React.FC<ButtonProps> = ({ onClick, children, color }) => {
+export const Button: React.FC<ButtonProps> = ({ onClick, children, color }) => {
     return (
         <button
             className={classNames(styles.button, styles.primary, {
@@ -20,5 +20,3 @@ const Button: React.FC<ButtonProps> = ({ onClick, children, color }) => {
         </button>
     );
 };
-
-export default Button;

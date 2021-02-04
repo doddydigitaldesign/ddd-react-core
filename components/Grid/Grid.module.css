@@ -1,0 +1,20 @@
+@import "../shared/resets.css";
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 100px;
+    row-gap: 100px;
+    column-gap: 100px;
+}
+
+.container {
+    grid-template-columns: 1fr 6fr 1fr;
+}
+
+.center {
+    place-content: center;
+    place-items: center;
+    place-self: center;
+}

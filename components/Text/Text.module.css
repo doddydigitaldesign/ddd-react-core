@@ -1,0 +1,39 @@
+@import "../shared/typography.css";
+@import "../shared/colors.css";
+
+.text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    color: var(--text-secondary);
+}
+
+h1.text,
+h2.text,
+h3.text,
+h4.text,
+h5.text,
+h6.text {
+    color: var(--text-primary);
+}
+
+/* Reset browser defaults */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+b {
+    /* display: unset;
+    margin-block-start: unset;
+    margin-block-end: unset;
+    margin-inline-start: unset;
+    margin-inline-end: unset;
+    margin-block-start: unset;
+    margin-block-end: unset;
+    margin-inline-start: unset;
+    margin-inline-end: unset; */
+    font-weight: unset;
+}
