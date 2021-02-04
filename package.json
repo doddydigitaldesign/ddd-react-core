@@ -9,7 +9,7 @@
         "build": "webpack --config webpack.production.ts --mode production",
         "lint": "eslint --fix ./*/**/*.{js,ts,tsx}",
         "format": "prettier --write .",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "jest"
     },
     "keywords": [],
     "author": "Daniel Sonne Lehnberg <doddy@doddy.se> (https://www.doddy.se/)",
@@ -38,6 +38,7 @@
         "eslint-plugin-react-hooks": "^4.2.0",
         "html-webpack-plugin": "^4.5.1",
         "jest": "^26.6.3",
+        "jest-css-modules": "^2.1.0",
         "prettier": "^2.2.1",
         "style-loader": "^2.0.0",
         "ts-node": "^9.1.1",
@@ -51,5 +52,10 @@
         "clsx": "^1.1.1",
         "react": "^17.0.1",
         "react-dom": "^17.0.1"
+    },
+    "jest": {
+        "moduleNameMapper": {
+            "\\.(css|less|scss|sss|styl)$": "<rootDir>/node_modules/jest-css-modules"
+        }
     }
 }

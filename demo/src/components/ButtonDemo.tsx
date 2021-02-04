@@ -8,11 +8,11 @@ const ButtonDemo: React.FC = () => {
     const [count, setCount] = useState(0);
     return (
         <Grid centered>
-            <Row>
-                <Column>
+            <Column>
+                <Row>
                     <p>Counter: {count}</p>
-                </Column>
-            </Row>
+                </Row>
+            </Column>
             <Row>
                 <Column>
                     <Button
@@ -21,16 +21,18 @@ const ButtonDemo: React.FC = () => {
                     >
                         Increment
                     </Button>
+                    <Button
+                        color={"primary"}
+                        onClick={() => setCount((val) => val - 1)}
+                    >
+                        Decrement
+                    </Button>
                 </Column>
-                <Button
-                    color={"primary"}
-                    onClick={() => setCount((val) => val - 1)}
-                >
-                    Decrement
-                </Button>
-                <Button color={"error"} onClick={() => setCount(0)}>
-                    Reset
-                </Button>
+                <Column>
+                    <Button color={"error"} onClick={() => setCount(0)}>
+                        Reset
+                    </Button>
+                </Column>
             </Row>
         </Grid>
     );
