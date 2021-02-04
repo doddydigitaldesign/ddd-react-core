@@ -1,7 +1,7 @@
-@import "./shared/resets.css";
-@import "./shared/colors.css";
-@import "./shared/typography.css";
-@import "./shared/animations.css";
+@import "../shared/resets.css";
+@import "../shared/colors.css";
+@import "../shared/typography.css";
+@import "../shared/animations.css";
 
 .button {
     padding: 1rem;
