@@ -1,0 +1,55 @@
+@import "../shared/colors.css";
+
+@keyframes slide-down {
+    0% {
+        opacity: 0%;
+    }
+}
+
+.details {
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.details[open] > :nth-child(2) {
+    height: 100%;
+    animation-duration: 500ms;
+    animation-timing-function: linear;
+    animation-delay: 0ms;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+    animation-name: slide-down;
+}
+
+.summary {
+    display: grid;
+    grid-template-columns: 9fr 1fr;
+    align-items: center;
+    background: hsla(0, 53%, 2%, 100%);
+    color: hsla(1, 100%, 100%, 100%);
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    padding: 1rem;
+    cursor: pointer;
+    list-style: none;
+    border-radius: 0.225rem;
+    box-shadow: 0px 0px 8px hsla(0, 0%, 0%, 0.12),
+        0px 8px 8px hsla(0, 0%, 0%, 0.24);
+}
+
+.marker {
+    display: grid;
+    place-content: center;
+
+    margin-left: calc(100% - 6rem);
+}
+
+.details > .summary::-webkit-details-marker {
+    display: none;
+}
+.details > .summary::marker {
+    display: none;
+}

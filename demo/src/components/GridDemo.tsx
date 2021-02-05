@@ -1,22 +1,16 @@
-import React from "react";
-import { Centered, Column, Grid, Paper, Row, Text } from "../../../components";
+import React, { useState } from "react";
+import {
+    Accordion,
+    Centered,
+    Column,
+    Grid,
+    Paper,
+    Row,
+    Text,
+} from "../../../components";
 
 export const GridDemo: React.FC = () => {
-    return (
-        <Paper>
-            <Grid>
-                <Column start={1} end={13}>
-                    <Text variant={"h1"}>Layout</Text>
-                    <Text variant={"h3"}>
-                        The Grid, Row and Column components use CSS Grid to
-                        simplify different layouts.
-                    </Text>
-                </Column>
-
-                <Column start={1} end={13}>
-                    <Text variant={"pre"}>
-                        <Text variant={"code"}>
-                            {`<Grid>
+    const exampleCode = `<Grid>
     <Column start={1} end={4}>
         <Row>
             <Paper>
@@ -65,9 +59,47 @@ export const GridDemo: React.FC = () => {
             </Paper>
         </Row>
     </Column>
-</Grid>`}
-                        </Text>
+</Grid>`;
+
+    const [codeOpen, setCodeOpen] = useState(false);
+    return (
+        <Paper>
+            <Grid>
+                <Column start={1} end={13}>
+                    <Text variant={"h1"}>Layout</Text>
+                    <Text variant={"h3"}>
+                        The Grid, Row and Column components use CSS Grid to
+                        simplify different layouts.
                     </Text>
+                </Column>
+
+                <Column start={1} end={13}>
+                    <Accordion
+                        open={codeOpen}
+                        onToggle={(e) => {
+                            if (
+                                e.target &&
+                                (e.target as typeof e.target & {
+                                    open: boolean;
+                                }).open
+                            ) {
+                                setCodeOpen(
+                                    (e.target as typeof e.target & {
+                                        open: boolean;
+                                    }).open,
+                                );
+                            } else {
+                                setCodeOpen(false);
+                            }
+                        }}
+                        summaryProps={{
+                            children: "Code example",
+                        }}
+                    >
+                        <Text variant={"pre"}>
+                            <Text variant={"code"}>{exampleCode}</Text>
+                        </Text>
+                    </Accordion>
                 </Column>
 
                 <Column start={1} end={4}>
