@@ -3,21 +3,9 @@ import classNames from "../../lib/utils/classNames";
 import styles from "./Grid.module.css";
 
 export interface GridProps {
-    centered?: boolean;
-    container?: boolean;
+    className?: string;
 }
 
-export const Grid: React.FC<GridProps> = (props) => {
-    return (
-        <div
-            className={classNames(styles.grid, {
-                [styles.center]: props.centered,
-                [styles.container]: props.container,
-            })}
-        >
-            {props.container && <div />}
-            {props.container ? <div>{props.children}</div> : props.children}
-            {props.container && <div />}
-        </div>
-    );
+export const Grid: React.FC<GridProps> = ({ children, className }) => {
+    return <div className={classNames(styles.grid, className)}>{children}</div>;
 };

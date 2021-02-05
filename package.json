@@ -3,7 +3,11 @@
     "version": "0.0.1",
     "description": "",
     "type": "module",
-    "main": "index.js",
+    "main": "build/index.js",
+    "repository": {
+        "url": "https://github.com/doddydigitaldesign/ddd-react-core",
+        "type": "git"
+    },
     "scripts": {
         "start": "webpack serve --open --config webpack.development.ts --mode development",
         "build": "webpack --config webpack.production.ts --mode production",
@@ -12,7 +16,7 @@
         "format": "prettier --write .",
         "test": "jest"
     },
-    "keywords": [],
+    "keywords": ["typescript", "reactjs", "component-library"],
     "author": "Daniel Sonne Lehnberg <doddy@doddy.se> (https://www.doddy.se/)",
     "license": "MIT",
     "devDependencies": {
