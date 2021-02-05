@@ -14,9 +14,9 @@
     letter-spacing: 0.04rem;
     color: hsl(0, 0%, 100%);
     text-rendering: auto;
+    border-radius: 0.225rem;
     box-shadow: 0px 0px 8px hsla(0, 0%, 0%, 0.12),
         0px 8px 8px hsla(0, 0%, 0%, 0.24);
-    border-radius: 0.225rem;
 }
 
 .primary {
@@ -28,7 +28,9 @@
         var(--bg-primary);
     color: hsla(0, 0%, 100%, 100%);
 }
-
+.primary:hover {
+    background: var(--bg-primary);
+}
 .success {
     background: linear-gradient(
             0deg,
@@ -37,6 +39,9 @@
         ),
         var(--bg-success);
     color: hsla(0, 0%, 100%, 100%);
+}
+.success:hover {
+    background: var(--bg-success);
 }
 
 .error {
@@ -47,6 +52,9 @@
         ),
         var(--bg-error);
     color: hsla(0, 0%, 100%, 100%);
+}
+.error:hover {
+    background: var(--bg-error);
 }
 
 /* Reset browser defaults */

@@ -1,13 +1,15 @@
 @keyframes depress {
     from {
-        filter: brightness(0.75);
+        filter: brightness(0.7);
+        box-shadow: 0px 0px 4px hsla(0, 0%, 0%, 0.12),
+            0px 4px 4px hsla(0, 0%, 0%, 0.24);
     }
 }
 
 button:active {
-    animation: 450ms depress normal ease-out;
+    animation: 250ms depress normal ease-out;
 }
-
+/* 
 button:focus {
-    animation: 1s depress normal ease-out;
-}
+    animation: 500ms depress normal ease-out;
+} */

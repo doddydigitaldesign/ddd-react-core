@@ -6,23 +6,23 @@ import { Grid } from "../../../components/Grid";
 import { Row } from "../../../components/Row";
 import { Text } from "../../../components/Text";
 
-const ButtonDemo: React.FC = () => {
+export const ButtonDemo: React.FC = () => {
     const [count, setCount] = useState(0);
     return (
-        <Grid container>
-            <Paper>
+        <Paper>
+            <Grid>
                 <Row>
-                    <Column>
+                    <Column start={1} end={12}>
                         <Text variant={"h1"}>Buttons</Text>
                     </Column>
-                    <Column>
+                    <Column start={3} end={7}>
                         <Text variant={"h3"}>Counter: {count}</Text>
                     </Column>
                 </Row>
 
                 <Row>
-                    <Column>
-                        <Column>
+                    <Column start={3} end={7}>
+                        <Column start={3} end={7}>
                             <Button
                                 color={"success"}
                                 onClick={() => setCount((val) => val + 1)}
@@ -36,15 +36,15 @@ const ButtonDemo: React.FC = () => {
                                 Decrement
                             </Button>
                         </Column>
-                        <Column>
+                        <Column start={3} end={7}>
                             <Button color={"error"} onClick={() => setCount(0)}>
                                 Reset
                             </Button>
                         </Column>
                     </Column>
                 </Row>
-            </Paper>
-        </Grid>
+            </Grid>
+        </Paper>
     );
 };
 
