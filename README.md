@@ -4,9 +4,9 @@
 
 **A React component library by Doddy Digital Design**
 
-### Demo
+### Demo / Docs
 
-[https://doddydigitaldesign.github.io/ddd-react-core](https://doddydigitaldesign.github.io/ddd-react-core)
+[Visit page](https://doddydigitaldesign.github.io/ddd-react-core/)
 
 ### Install
 
