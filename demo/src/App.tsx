@@ -1,6 +1,7 @@
 import React from "react";
 import { Paper, Text } from "../../components";
 import { ButtonDemo } from "./components/ButtonDemo";
+import FormDemo from "./components/FormDemo";
 import { GridDemo } from "./components/GridDemo";
 
 const App: React.FC = () => {
@@ -20,6 +21,7 @@ const App: React.FC = () => {
             </Text>
             <GridDemo />
             <ButtonDemo />
+            <FormDemo />
         </Paper>
     );
 };

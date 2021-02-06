@@ -13,3 +13,5 @@ export const COLUMN_SIZES = [
     12,
     13,
 ] as const;
+
+export type FormValues<T extends string> = Record<T, string>;
