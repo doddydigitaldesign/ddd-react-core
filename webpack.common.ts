@@ -15,7 +15,7 @@ const webpackConfig: Configuration & DevServerConfig = {
         ],
     },
     resolve: {
-        extensions: [".js", ".jsx", ".ts", ".tsx", ".html"],
+        extensions: [".js", ".jsx", ".ts", ".tsx", ".html", ".css"],
     },
 };
 
