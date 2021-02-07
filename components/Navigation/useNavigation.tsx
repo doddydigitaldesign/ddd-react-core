@@ -1,7 +1,10 @@
 import { useContext } from "react";
-import { NavigationContext } from ".";
+import { INavigationState, NavigationContext } from ".";
 
-export const useNavigation = () => {
+export const useNavigation = (): {
+    state: INavigationState;
+    setActiveItem: (id: string) => void;
+} => {
     const ctx = useContext(NavigationContext);
 
     return ctx;

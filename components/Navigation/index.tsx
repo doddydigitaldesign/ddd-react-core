@@ -51,7 +51,7 @@ export const NavigationContext = React.createContext<{
     setActiveItem: (id: string) => void;
 }>({
     state: {},
-    setActiveItem: (id) => {
+    setActiveItem: () => {
         return undefined;
     },
 });

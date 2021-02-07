@@ -33,7 +33,7 @@ const App: React.FC = () => {
                         </Text>
                         <hr />
                         <NavigationItem
-                            onClick={(e) => {
+                            onClick={() => {
                                 console.log("Layout");
                             }}
                             id={"layout"}
@@ -41,7 +41,7 @@ const App: React.FC = () => {
                             Layout
                         </NavigationItem>
                         <NavigationItem
-                            onClick={(e) => {
+                            onClick={() => {
                                 console.log("Buttons");
                             }}
                             id={"buttons"}
@@ -49,7 +49,7 @@ const App: React.FC = () => {
                             Buttons
                         </NavigationItem>
                         <NavigationItem
-                            onClick={(e) => {
+                            onClick={() => {
                                 console.log("Forms");
                             }}
                             id={"forms"}
@@ -57,7 +57,7 @@ const App: React.FC = () => {
                             Forms
                         </NavigationItem>
                         <NavigationItem
-                            onClick={(e) => {
+                            onClick={() => {
                                 console.log("Text");
                             }}
                             id={"text"}
