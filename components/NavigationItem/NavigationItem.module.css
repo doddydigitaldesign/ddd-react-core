@@ -1,0 +1,13 @@
+@import "../shared/colors.css";
+
+.item {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.active {
+    background-color: var(--bg-primary);
+    color: hsla(0, 0%, 100%, 100%);
+}

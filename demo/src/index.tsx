@@ -1,5 +1,18 @@
 import React from "react";
 import { render } from "react-dom";
+import { NavigationProvider } from "../../components";
 import App from "./App";
 
-render(<App />, document.querySelector("#demo"));
+render(
+    <NavigationProvider
+        navItems={[
+            { active: true, id: "layout" },
+            { active: false, id: "buttons" },
+            { active: false, id: "forms" },
+            { active: false, id: "text" },
+        ]}
+    >
+        <App />
+    </NavigationProvider>,
+    document.querySelector("#demo"),
+);
