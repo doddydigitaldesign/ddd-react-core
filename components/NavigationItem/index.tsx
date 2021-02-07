@@ -1,0 +1,37 @@
+import React, { AnchorHTMLAttributes, useContext } from "react";
+import classNames from "../../lib/utils/classNames";
+import { NavigationContext } from "../Navigation";
+import styles from "./NavigationItem.module.css";
+
+export interface NavigationItemProps extends AnchorHTMLAttributes<HTMLElement> {
+    id: string;
+}
+
+export const NavigationItem: React.FC<NavigationItemProps> = ({
+    className,
+    id,
+    onClick,
+    ...rest
+}) => {
+    const ctx = useContext(NavigationContext);
+    return (
+        <a
+            className={classNames(
+                styles.item,
+                {
+                    [styles.active]: !!ctx.state[id],
+                },
+                className,
+            )}
+            onClick={(e) => {
+                ctx.setActiveItem(id);
+                if (onClick) {
+                    onClick(e);
+                }
+                console.log(ctx.state);
+            }}
+            color={"error"}
+            {...rest}
+        />
+    );
+};
