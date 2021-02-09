@@ -14,4 +14,7 @@ export const COLUMN_SIZES = [
     13,
 ] as const;
 
-export type FormValues<T extends string> = Record<T, string>;
+export type FormValues<T extends string> = Record<
+    T,
+    string | number | readonly string[] | boolean | undefined
+>;

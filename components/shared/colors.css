@@ -4,12 +4,15 @@
     --bg-primary: hsla(231, 49%, 47%, 100%);
     --bg-error: hsla(5, 69%, 54%, 100%);
     --bg-primary-light: hsla(231, 49%, 85%, 100%);
-    --bg-dark: hsla(0, 0%, 0%, 82%);
+    --bg-dark: hsla(30, 3%, 12%, 100%);
     --bg-light: hsla(255, 100%, 100%, 100%);
 
+    /* Border colors */
+    --border-light: hsla(30, 2%, 53%, 100%);
+
     /* Typographic colors */
-    --text-primary: hsla(0, 0%, 0%, 82%);
-    --text-secondary: hsla(0, 0%, 0%, 54%);
+    --text-primary: hsla(30, 3%, 12%, 100%);
+    --text-secondary: hsla(30, 3%, 24%, 100%);
 
     /* Interactivity colors */
     --table-row-hover: hsla(0, 0%, 90%, 100%);
