@@ -1,10 +1,6 @@
 .tableHeadCell {
     text-align: start;
-    box-sizing: border-box;
-    min-width: fit-content;
-    padding-right: 1rem;
-    padding-left: 1rem;
-    height: 4rem;
+    margin-left: 1rem;
 }
 
 .tableHeadCell > h1,
