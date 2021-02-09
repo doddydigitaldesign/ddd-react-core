@@ -1,6 +1,5 @@
 import React, { HTMLAttributes } from "react";
 import classNames from "../../lib/utils/classNames";
-import styles from "./TableHead.module.css";
 
 export interface TableHeadProps extends HTMLAttributes<HTMLElement> {
     caption?: React.ReactNode;
@@ -15,11 +14,9 @@ export const TableHead: React.FC<TableHeadProps> = ({
     ...rest
 }) => {
     return (
-        <thead className={classNames(styles.tableHead, className)} {...rest}>
+        <thead className={classNames(className)} {...rest}>
             {caption && (
-                <caption
-                    className={classNames(styles.caption, captionClassName)}
-                >
+                <caption className={classNames(captionClassName)}>
                     {caption}
                 </caption>
             )}

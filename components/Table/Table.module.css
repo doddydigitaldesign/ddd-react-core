@@ -1,13 +1,21 @@
+.wrapper {
+    max-width: 100%;
+    overflow-x: scroll;
+    padding: 1rem;
+    padding-bottom: 2rem;
+}
 .table {
     -webkit-overflow-scrolling: touch;
+    overflow: hidden;
     overflow-x: auto;
-    width: 100%;
     border: 0;
     white-space: nowrap;
     border-collapse: collapse;
     table-layout: fixed;
-    display: grid;
-    grid-template-areas:
-        "head"
-        "body";
+    width: minmax(100%, auto);
+}
+
+.table > thead > tr > th,
+.table > tbody > tr > td {
+    padding-right: 1rem;
 }

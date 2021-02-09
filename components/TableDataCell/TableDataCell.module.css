@@ -1,8 +1,5 @@
 .tableDataCell {
     text-align: start;
-    box-sizing: border-box;
-    padding-right: 1rem;
-    padding-left: 1rem;
 }
 .tableDataCell > h1,
 .tableDataCell > h2,
