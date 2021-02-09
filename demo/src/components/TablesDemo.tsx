@@ -9,8 +9,6 @@ import {
     TableHeadCell,
     TableRow,
 } from "../../../components";
-import { Column } from "../../../components/Column";
-import { Grid } from "../../../components/Grid";
 import { Text } from "../../../components/Text";
 
 const tableRowData = [
@@ -249,106 +247,142 @@ const tableRowData = [
 export const TablesDemo: React.FC = () => {
     return (
         <Paper>
-            <Grid>
-                <Column start={1} end={12}>
-                    <Text variant={"h1"}>Tables</Text>
-                    <Text variant={"p"}>
-                        The Table, TableHead, TableBody, TableRow, TableHeadCell
-                        and TableDataCell components make it easy to construct
-                        tables.
-                    </Text>
-                </Column>
+            <Text variant={"h1"}>Tables</Text>
+            <Text variant={"p"}>
+                The Table, TableHead, TableBody, TableRow, TableHeadCell and
+                TableDataCell components make it easy to construct tables.
+            </Text>
 
-                <Column start={1} end={13}>
-                    <Table>
-                        <TableHead caption={"Table #1"}>
-                            <TableRow>
-                                <TableHeadCell>
-                                    <Text variant={"h6"}>Id</Text>
-                                </TableHeadCell>
-                                <TableHeadCell>
-                                    <Text variant={"h6"}>Notes</Text>
-                                </TableHeadCell>
-                                <TableHeadCell>
-                                    <Text variant={"h6"}>User name</Text>
-                                </TableHeadCell>
-                                <TableHeadCell>
-                                    <Text variant={"h6"}>Full name</Text>
-                                </TableHeadCell>
-                                <TableHeadCell>
-                                    <Text variant={"h6"}>Company</Text>
-                                </TableHeadCell>
-                                <TableHeadCell>
-                                    <Text variant={"h6"}>Website</Text>
-                                </TableHeadCell>
-                                <TableHeadCell>
-                                    <Text variant={"h6"}>Email</Text>
-                                </TableHeadCell>
-                                <TableHeadCell>
-                                    <Text variant={"h6"}>Address</Text>
-                                </TableHeadCell>
-                                <TableHeadCell>
-                                    <Text variant={"h6"}>Telephone number</Text>
-                                </TableHeadCell>
-                            </TableRow>
-                        </TableHead>
-                        <TableBody>
-                            {tableRowData.map((user) => (
-                                <TableRow key={user.id}>
-                                    <TableDataCell title={"" + user.id}>
-                                        <Text variant={"p"}>{user.id}</Text>
-                                    </TableDataCell>
-                                    <TableDataCell title={"Input"}>
-                                        <Input
-                                            id={"input-" + user.id}
-                                            label={"Note"}
-                                        />
-                                    </TableDataCell>
-                                    <TableDataCell title={user.username}>
-                                        <Text variant={"address"}>
-                                            {user.username}
-                                        </Text>
-                                    </TableDataCell>
-                                    <TableDataCell title={user.name}>
-                                        <Text variant={"p"}>{user.name}</Text>
-                                    </TableDataCell>
-                                    <TableDataCell title={user.company.name}>
-                                        <Text variant={"p"}>
-                                            {user.company.name}
-                                        </Text>
-                                    </TableDataCell>
-                                    <TableDataCell title={user.website}>
-                                        <Text variant={"p"}>
-                                            {user.website}
-                                        </Text>
-                                    </TableDataCell>
-                                    <TableDataCell title={user.email}>
-                                        <Text variant={"p"}>{user.email}</Text>
-                                    </TableDataCell>
-                                    <TableDataCell
-                                        title={
-                                            user.address.street +
-                                            ", " +
-                                            user.address.city
-                                        }
-                                    >
-                                        <Text variant={"address"}>
-                                            {user.address.street}
-                                            {", "}
-                                            {user.address.city}
-                                        </Text>
-                                    </TableDataCell>
-                                    <TableDataCell title={user.phone}>
-                                        <Text variant={"address"}>
-                                            {user.phone}
-                                        </Text>
-                                    </TableDataCell>
-                                </TableRow>
-                            ))}
-                        </TableBody>
-                    </Table>
-                </Column>
-            </Grid>
+            <Table>
+                <TableHead caption={"Table #1"}>
+                    <TableRow>
+                        <TableHeadCell>
+                            <Text variant={"h6"}>Id</Text>
+                        </TableHeadCell>
+                        <TableHeadCell>
+                            <Text variant={"h6"}>Notes</Text>
+                        </TableHeadCell>
+                        <TableHeadCell>
+                            <Text variant={"h6"}>User name</Text>
+                        </TableHeadCell>
+                        <TableHeadCell>
+                            <Text variant={"h6"}>Full name</Text>
+                        </TableHeadCell>
+                        <TableHeadCell>
+                            <Text variant={"h6"}>Company</Text>
+                        </TableHeadCell>
+                        <TableHeadCell>
+                            <Text variant={"h6"}>Website</Text>
+                        </TableHeadCell>
+                        <TableHeadCell>
+                            <Text variant={"h6"}>Email</Text>
+                        </TableHeadCell>
+                        <TableHeadCell>
+                            <Text variant={"h6"}>Address</Text>
+                        </TableHeadCell>
+                        <TableHeadCell>
+                            <Text variant={"h6"}>Telephone number</Text>
+                        </TableHeadCell>
+                        <TableHeadCell>
+                            <Text variant={"h6"}>Telephone number</Text>
+                        </TableHeadCell>
+                        <TableHeadCell>
+                            <Text variant={"h6"}>Telephone number</Text>
+                        </TableHeadCell>
+                        <TableHeadCell>
+                            <Text variant={"h6"}>Telephone number</Text>
+                        </TableHeadCell>
+                        <TableHeadCell>
+                            <Text variant={"h6"}>Telephone number</Text>
+                        </TableHeadCell>
+                        <TableHeadCell>
+                            <Text variant={"h6"}>Telephone number</Text>
+                        </TableHeadCell>
+                        <TableHeadCell>
+                            <Text variant={"h6"}>Telephone number</Text>
+                        </TableHeadCell>
+                        <TableHeadCell>
+                            <Text variant={"h6"}>Telephone number</Text>
+                        </TableHeadCell>
+                        <TableHeadCell>
+                            <Text variant={"h6"}>Telephone number</Text>
+                        </TableHeadCell>
+                        <TableHeadCell>
+                            <Text variant={"h6"}>Telephone number</Text>
+                        </TableHeadCell>
+                    </TableRow>
+                </TableHead>
+                <TableBody>
+                    {tableRowData.map((user) => (
+                        <TableRow key={user.id}>
+                            <TableDataCell title={"" + user.id}>
+                                <Text variant={"p"}>{user.id}</Text>
+                            </TableDataCell>
+                            <TableDataCell title={"Input"}>
+                                <Input id={"input-" + user.id} label={"Note"} />
+                            </TableDataCell>
+                            <TableDataCell title={user.username}>
+                                <Text variant={"address"}>{user.username}</Text>
+                            </TableDataCell>
+                            <TableDataCell title={user.name}>
+                                <Text variant={"p"}>{user.name}</Text>
+                            </TableDataCell>
+                            <TableDataCell title={user.company.name}>
+                                <Text variant={"p"}>{user.company.name}</Text>
+                            </TableDataCell>
+                            <TableDataCell title={user.website}>
+                                <Text variant={"p"}>{user.website}</Text>
+                            </TableDataCell>
+                            <TableDataCell title={user.email}>
+                                <Text variant={"p"}>{user.email}</Text>
+                            </TableDataCell>
+                            <TableDataCell
+                                title={
+                                    user.address.street +
+                                    ", " +
+                                    user.address.city
+                                }
+                            >
+                                <Text variant={"address"}>
+                                    {user.address.street}
+                                    {", "}
+                                    {user.address.city}
+                                </Text>
+                            </TableDataCell>
+                            <TableDataCell title={user.phone}>
+                                <Text variant={"address"}>{user.phone}</Text>
+                            </TableDataCell>
+                            <TableDataCell title={user.phone}>
+                                <Text variant={"address"}>{user.phone}</Text>
+                            </TableDataCell>
+                            <TableDataCell title={user.phone}>
+                                <Text variant={"address"}>{user.phone}</Text>
+                            </TableDataCell>
+                            <TableDataCell title={user.phone}>
+                                <Text variant={"address"}>{user.phone}</Text>
+                            </TableDataCell>
+                            <TableDataCell title={user.phone}>
+                                <Text variant={"address"}>{user.phone}</Text>
+                            </TableDataCell>
+                            <TableDataCell title={user.phone}>
+                                <Text variant={"address"}>{user.phone}</Text>
+                            </TableDataCell>
+                            <TableDataCell title={user.phone}>
+                                <Text variant={"address"}>{user.phone}</Text>
+                            </TableDataCell>
+                            <TableDataCell title={user.phone}>
+                                <Text variant={"address"}>{user.phone}</Text>
+                            </TableDataCell>
+                            <TableDataCell title={user.phone}>
+                                <Text variant={"address"}>{user.phone}</Text>
+                            </TableDataCell>
+                            <TableDataCell title={user.phone}>
+                                <Text variant={"address"}>{user.phone}</Text>
+                            </TableDataCell>
+                        </TableRow>
+                    ))}
+                </TableBody>
+            </Table>
         </Paper>
     );
 };

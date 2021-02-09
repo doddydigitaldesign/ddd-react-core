@@ -6,11 +6,11 @@ import App from "./App";
 render(
     <NavigationProvider
         navItems={[
-            { active: false, id: "layout" },
+            { active: true, id: "layout" },
             { active: false, id: "buttons" },
             { active: false, id: "forms" },
             { active: false, id: "text" },
-            { active: true, id: "table" },
+            { active: false, id: "table" },
         ]}
     >
         <App />

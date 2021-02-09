@@ -1,6 +1,5 @@
 .tableHeadCell {
     text-align: start;
-    margin-left: 1rem;
 }
 
 .tableHeadCell > h1,
@@ -14,5 +13,4 @@
 .tableHeadCell > address {
     text-overflow: ellipsis;
     overflow: hidden;
-    font-weight: 600;
 }

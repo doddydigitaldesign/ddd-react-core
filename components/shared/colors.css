@@ -4,7 +4,7 @@
     --bg-primary: hsla(231, 49%, 47%, 100%);
     --bg-error: hsla(5, 69%, 54%, 100%);
     --bg-primary-light: hsla(231, 49%, 85%, 100%);
-    --bg-dark: hsla(0, 0%, 0%, 0.82);
+    --bg-dark: hsla(0, 0%, 0%, 82%);
     --bg-light: hsla(255, 100%, 100%, 100%);
 
     /* Typographic colors */
@@ -13,4 +13,5 @@
 
     /* Interactivity colors */
     --table-row-hover: hsla(0, 0%, 90%, 100%);
+    --table-row-border: hsla(0, 0%, 75%, 100%);
 }
