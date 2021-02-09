@@ -6,6 +6,7 @@
     src: url(https://fonts.gstatic.com/s/materialicons/v76/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2)
         format("woff2");
 }
+@import "./colors.css";
 
 .material-icons {
     font-family: "Material Icons";
@@ -20,9 +21,9 @@
     word-wrap: normal;
     direction: ltr;
     -webkit-font-feature-settings: "liga";
+    font-feature-settings: "liga";
     -webkit-font-smoothing: antialiased;
 }
-@import "./colors.css";
 
 :root {
     color: var(--text-primary);

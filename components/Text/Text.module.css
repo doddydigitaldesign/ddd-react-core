@@ -15,6 +15,38 @@ h4.text,
 h5.text,
 h6.text {
     color: var(--text-primary);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+h1.text {
+    font-size: 2.5rem;
+}
+h2.text {
+    font-size: 2.25rem;
+}
+h3.text {
+    font-size: 1.75rem;
+}
+h4.text {
+    font-size: 1.5rem;
+}
+h5.text {
+    font-size: 1.25rem;
+}
+h6.text {
+    font-size: 1.1rem;
+}
+
+strong.text {
+    font-weight: 600;
+}
+
+address.text {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }
 
 /* Reset browser defaults */
@@ -24,16 +56,6 @@ h3,
 h4,
 h5,
 h6,
-p,
-b {
-    /* display: unset;
-    margin-block-start: unset;
-    margin-block-end: unset;
-    margin-inline-start: unset;
-    margin-inline-end: unset;
-    margin-block-start: unset;
-    margin-block-end: unset;
-    margin-inline-start: unset;
-    margin-inline-end: unset; */
+p {
     font-weight: unset;
 }

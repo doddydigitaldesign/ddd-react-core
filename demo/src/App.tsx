@@ -4,6 +4,7 @@ import {
     Grid,
     NavigationItem,
     Paper,
+    Row,
     Sidebar,
     Text,
 } from "../../components";
@@ -11,6 +12,8 @@ import { useNavigation } from "../../components/Navigation/useNavigation";
 import { ButtonDemo } from "./components/ButtonDemo";
 import FormDemo from "./components/FormDemo";
 import { GridDemo } from "./components/GridDemo";
+import TablesDemo from "./components/TablesDemo";
+import { TextDemo } from "./components/TextsDemo";
 
 const App: React.FC = () => {
     const nav = useNavigation();
@@ -32,38 +35,34 @@ const App: React.FC = () => {
                             </a>
                         </Text>
                         <hr />
-                        <NavigationItem
-                            onClick={() => {
-                                console.log("Layout");
-                            }}
-                            id={"layout"}
-                        >
-                            Layout
-                        </NavigationItem>
-                        <NavigationItem
-                            onClick={() => {
-                                console.log("Buttons");
-                            }}
-                            id={"buttons"}
-                        >
-                            Buttons
-                        </NavigationItem>
-                        <NavigationItem
-                            onClick={() => {
-                                console.log("Forms");
-                            }}
-                            id={"forms"}
-                        >
-                            Forms
-                        </NavigationItem>
-                        <NavigationItem
-                            onClick={() => {
-                                console.log("Text");
-                            }}
-                            id={"text"}
-                        >
-                            Text
-                        </NavigationItem>
+
+                        <Column start={1} end={13}>
+                            <Row>
+                                <NavigationItem id={"layout"}>
+                                    Layout
+                                </NavigationItem>
+                            </Row>
+                            <Row>
+                                <NavigationItem id={"buttons"}>
+                                    Buttons
+                                </NavigationItem>
+                            </Row>
+                            <Row>
+                                <NavigationItem id={"forms"}>
+                                    Forms
+                                </NavigationItem>
+                            </Row>
+                            <Row>
+                                <NavigationItem id={"text"}>
+                                    Text
+                                </NavigationItem>
+                            </Row>
+                            <Row>
+                                <NavigationItem id={"table"}>
+                                    Tables
+                                </NavigationItem>
+                            </Row>
+                        </Column>
                     </Paper>
                 </Sidebar>
             </Column>
@@ -71,6 +70,8 @@ const App: React.FC = () => {
                 {nav.state["layout"] && <GridDemo />}
                 {nav.state["buttons"] && <ButtonDemo />}
                 {nav.state["forms"] && <FormDemo />}
+                {nav.state["text"] && <TextDemo />}
+                {nav.state["table"] && <TablesDemo />}
             </Column>
         </Grid>
     );

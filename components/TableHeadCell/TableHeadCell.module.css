@@ -1,0 +1,22 @@
+.tableHeadCell {
+    text-align: start;
+    box-sizing: border-box;
+    min-width: fit-content;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    height: 4rem;
+}
+
+.tableHeadCell > h1,
+.tableHeadCell > h2,
+.tableHeadCell > h3,
+.tableHeadCell > h4,
+.tableHeadCell > h5,
+.tableHeadCell > h6,
+.tableHeadCell > p,
+.tableHeadCell > span,
+.tableHeadCell > address {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-weight: 600;
+}

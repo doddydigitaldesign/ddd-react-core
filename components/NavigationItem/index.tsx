@@ -15,23 +15,25 @@ export const NavigationItem: React.FC<NavigationItemProps> = ({
 }) => {
     const ctx = useContext(NavigationContext);
     return (
-        <a
-            className={classNames(
-                styles.item,
-                {
-                    [styles.active]: !!ctx.state[id],
-                },
-                className,
-            )}
-            onClick={(e) => {
-                ctx.setActiveItem(id);
-                if (onClick) {
-                    onClick(e);
-                }
-                console.log(ctx.state);
-            }}
-            color={"error"}
-            {...rest}
-        />
+        <div className={classNames(styles.wrapper)}>
+            <a
+                className={classNames(
+                    styles.item,
+                    {
+                        [styles.active]: !!ctx.state[id],
+                    },
+                    className,
+                )}
+                onClick={(e) => {
+                    e.preventDefault();
+                    ctx.setActiveItem(id);
+                    if (onClick) {
+                        onClick(e);
+                    }
+                }}
+                color={"error"}
+                {...rest}
+            />
+        </div>
     );
 };
