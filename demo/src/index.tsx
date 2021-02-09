@@ -10,6 +10,7 @@ render(
             { active: false, id: "buttons" },
             { active: false, id: "forms" },
             { active: false, id: "text" },
+            { active: false, id: "table" },
         ]}
     >
         <App />

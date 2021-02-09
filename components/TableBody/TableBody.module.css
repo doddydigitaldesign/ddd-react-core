@@ -1,0 +1,5 @@
+.tableBody {
+    width: 100%;
+    grid-area: body;
+    display: contents;
+}

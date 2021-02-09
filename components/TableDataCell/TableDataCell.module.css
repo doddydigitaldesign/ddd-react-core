@@ -1,0 +1,18 @@
+.tableDataCell {
+    text-align: start;
+    box-sizing: border-box;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+.tableDataCell > h1,
+.tableDataCell > h2,
+.tableDataCell > h3,
+.tableDataCell > h4,
+.tableDataCell > h5,
+.tableDataCell > h6,
+.tableDataCell > p,
+.tableDataCell > span,
+.tableDataCell > address {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}

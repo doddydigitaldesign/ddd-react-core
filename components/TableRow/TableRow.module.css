@@ -1,0 +1,18 @@
+@import "../shared/colors.css";
+.tableRow {
+    display: grid;
+    grid-template-columns: 250px repeat(auto-fill, minmax(250px, auto)) 250px;
+    box-shadow: none;
+    grid-auto-flow: column;
+    border-bottom: 1px solid black;
+    border-radius: 0;
+    background-color: #fff;
+}
+
+thead > .tableRow {
+    grid-area: row;
+}
+
+.tableRow:hover {
+    background-color: var(--table-row-hover);
+}
