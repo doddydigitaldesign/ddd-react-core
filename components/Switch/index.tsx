@@ -52,15 +52,23 @@ export const Switch: React.FC<SwitchProps> = ({
             {active ? (
                 <>
                     <rect
-                        className={classNames({
-                            [styles.focused]: isFocused,
+                        className={classNames(styles.rectActive, {
+                            [styles.rectActiveFocused]: isFocused,
                         })}
                         width="40"
                         height="20"
                         rx="10"
                         fill="#106EBE"
                     />
-                    <circle cx="30" cy="10" r="6" fill="white" />
+                    <circle
+                        className={classNames(styles.toggleKnobActive, {
+                            [styles.toggleKnobActiveFocused]: isFocused,
+                        })}
+                        cx="30"
+                        cy="10"
+                        r="6"
+                        fill="white"
+                    />
                 </>
             ) : (
                 <>
@@ -72,10 +80,18 @@ export const Switch: React.FC<SwitchProps> = ({
                         rx="9.5"
                         fill="white"
                     />
-                    <circle cx="10" cy="10" r="6" fill="#201F1E" />
+                    <circle
+                        className={classNames(styles.toggleKnob, {
+                            [styles.toggleKnobFocused]: isFocused,
+                        })}
+                        cx="10"
+                        cy="10"
+                        r="6"
+                        fill="#201F1E"
+                    />
                     <rect
-                        className={classNames({
-                            [styles.focused]: isFocused,
+                        className={classNames(styles.rect, {
+                            [styles.rectFocused]: isFocused,
                         })}
                         x="0.5"
                         y="0.5"

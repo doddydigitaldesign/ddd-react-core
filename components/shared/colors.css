@@ -10,7 +10,8 @@
 
     /* Border colors */
     --border: hsla(30, 2%, 53%, 100%);
-    --border-dark: hsla(30, 2%, 19%, 100%);
+    --border-active: hsla(30, 2%, 19%, 100%);
+    --border-passive: hsla(30, 2%, 37%, 100%);
 
     /* Typographic colors */
     --text-primary: hsla(30, 3%, 12%, 100%);
