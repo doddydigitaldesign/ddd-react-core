@@ -1,5 +1,16 @@
 @import "../shared/colors.css";
 
+@keyframes fadeInKnob {
+    from {
+        opacity: 0%;
+    }
+}
+@keyframes fadeInKnobActive {
+    from {
+        opacity: 0%;
+    }
+}
+
 .switch {
     appearance: none;
 }
@@ -26,7 +37,40 @@
     column-gap: 0.5rem;
 }
 
-.focused {
-    stroke: var(--border-dark);
-    stroke-width: 2px;
+.rect {
+    stroke: var(--border-passive);
+}
+
+.rectFocused,
+.wrapper:hover > svg > .rect {
+    stroke: var(--border-active);
+}
+
+.rectActive {
+    fill: hsla(206, 100%, 42%, 100%);
+    stroke: none;
+}
+
+.rectActiveFocused,
+svg:hover > .rectActive {
+    fill: hsla(208, 84%, 40%, 100%);
+}
+
+.toggleKnob {
+    fill: var(--border-passive);
+    animation: fadeInKnob 300ms ease-in normal;
+}
+
+.toggleKnobFocused,
+svg:hover > .toggleKnob {
+    fill: var(--border-active);
+}
+
+.toggleKnobActive {
+    fill: var(--bg-light);
+    animation: fadeInKnobActive 300ms forwards normal;
+}
+.toggleKnobActiveFocused,
+svg:hover > .toggleKnobActive {
+    fill: var(--bg-light);
 }
