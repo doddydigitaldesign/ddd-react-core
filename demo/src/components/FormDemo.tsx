@@ -7,15 +7,17 @@ import {
     Input,
     Paper,
     Row,
+    Switch,
     Text,
 } from "../../../components";
 import { FormValues } from "../../../components/types";
 
 enum FormDemoIds {
-    Input1 = "Input1",
-    Input2 = "Input2",
-    Input3 = "Input3",
-    Input4 = "Input4",
+    Input1 = "Numeric",
+    Input2 = "NoValidation",
+    Input3 = "AwesomeValidator",
+    Input4 = "Checkbox",
+    Input5 = "Switch",
 }
 
 const FormDemo: React.FC = () => {
@@ -24,6 +26,7 @@ const FormDemo: React.FC = () => {
         [FormDemoIds.Input2]: "",
         [FormDemoIds.Input3]: "",
         [FormDemoIds.Input4]: false,
+        [FormDemoIds.Input5]: false,
     });
 
     const [formValidity, setFormValidity] = useState<boolean>(false);
@@ -88,7 +91,7 @@ const FormDemo: React.FC = () => {
                                     id={FormDemoIds.Input4}
                                     label={"Checkbox"}
                                     checked={!!values[FormDemoIds.Input4]}
-                                    onClick={(e) => {
+                                    onClick={() => {
                                         setValues({
                                             ...values,
                                             [FormDemoIds.Input4]: !values[
@@ -101,10 +104,39 @@ const FormDemo: React.FC = () => {
                             </Column>
                         </Row>
                         <Row>
+                            <Column start={3} end={7}>
+                                <Switch
+                                    id={FormDemoIds.Input5}
+                                    label={"Switch"}
+                                    checked={!!values[FormDemoIds.Input5]}
+                                    onClick={() => {
+                                        setValues({
+                                            ...values,
+                                            [FormDemoIds.Input5]: !values[
+                                                FormDemoIds.Input5
+                                            ],
+                                        });
+                                    }}
+                                />
+                            </Column>
+                        </Row>
+                        <Row>
                             <Column start={1} end={13}>
                                 <Button
+                                    disabled={!formValidity}
                                     onClick={(e) => {
-                                        alert("Form validity: " + formValidity);
+                                        e.preventDefault();
+                                        alert(
+                                            "Form validity: " +
+                                                formValidity +
+                                                "\nValues: \n" +
+                                                Object.entries(values)
+                                                    .map(
+                                                        ([key, value]) =>
+                                                            `${key}: ${value}\n`,
+                                                    )
+                                                    .join(""),
+                                        );
                                     }}
                                 >
                                     Submit

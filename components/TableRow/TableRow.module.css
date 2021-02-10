@@ -1,13 +1,13 @@
 @import "../shared/colors.css";
 .tableRow {
     box-shadow: none;
-    border-bottom: 1px solid var(--table-row-hover);
+    border-bottom: 1px solid var(--hover);
 }
 
 thead > tr.tableRow {
-    border-bottom: 2px solid var(--table-row-border);
+    border-bottom: 2px solid var(--border);
 }
 
 .tableRow:hover {
-    background-color: var(--table-row-hover);
+    background-color: var(--hover);
 }

@@ -1,8 +1,8 @@
-import React from "react";
+import React, { ButtonHTMLAttributes } from "react";
 import classNames from "../../lib/utils/classNames";
 import styles from "./Button.module.css";
 
-export interface ButtonProps {
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     className?: string;
     onClick: React.MouseEventHandler<HTMLButtonElement>;
     color?: "success" | "primary" | "error";
@@ -13,6 +13,7 @@ export const Button: React.FC<ButtonProps> = ({
     children,
     color,
     className,
+    ...rest
 }) => {
     return (
         <button
@@ -26,6 +27,7 @@ export const Button: React.FC<ButtonProps> = ({
                 className,
             )}
             onClick={onClick}
+            {...rest}
         >
             {children}
         </button>

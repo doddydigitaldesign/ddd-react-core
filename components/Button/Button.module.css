@@ -57,6 +57,11 @@
     background: var(--bg-error);
 }
 
+.button:disabled {
+    background: var(--bg-disabled);
+    color: var(--text-primary);
+}
+
 /* Reset browser defaults */
 button {
     appearance: unset;

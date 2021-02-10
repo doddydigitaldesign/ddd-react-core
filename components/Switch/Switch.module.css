@@ -1,0 +1,32 @@
+@import "../shared/colors.css";
+
+.switch {
+    appearance: none;
+}
+
+.svg {
+    cursor: pointer;
+    grid-area: switch;
+}
+
+.label {
+    grid-area: label;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.wrapper {
+    display: grid;
+    min-width: 3rem;
+    grid-template-areas: "switch label";
+    grid-template-columns: "2.5rem auto";
+    justify-content: start;
+    align-content: center;
+    column-gap: 0.5rem;
+}
+
+.focused {
+    stroke: var(--border-dark);
+    stroke-width: 2px;
+}
