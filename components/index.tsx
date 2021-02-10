@@ -11,6 +11,7 @@ export { NavigationItem } from "./NavigationItem";
 export { Paper } from "./Paper";
 export { Row } from "./Row";
 export { Sidebar } from "./Sidebar";
+export { Switch } from "./Switch";
 export { Table } from "./Table";
 export { TableBody } from "./TableBody";
 export { TableDataCell } from "./TableDataCell";

@@ -25,7 +25,7 @@ export const Input: React.FC<InputProps> = ({
             focusable="false"
             viewBox="0 0 24 24"
             aria-hidden="true"
-            onClick={(e) => {
+            onClick={() => {
                 if (ref.current) {
                     ref.current.click();
                 }
