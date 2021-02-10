@@ -16,6 +16,7 @@
         "predeploy": "npm run build:demo",
         "deploy": "gh-pages -b main -d demo/build",
         "typecheck": "tsc --project tsconfig.json --noEmit",
+        "compile": "tsc --project tsconfig.json",
         "lint": "eslint --fix ./*/**/*.{js,ts,tsx}",
         "format": "prettier --write .",
         "test": "jest"
