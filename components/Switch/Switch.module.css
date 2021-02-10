@@ -31,7 +31,7 @@
     display: grid;
     min-width: 3rem;
     grid-template-areas: "switch label";
-    grid-template-columns: "2.5rem auto";
+    grid-template-columns: repeat(2, min-content);
     justify-content: start;
     align-content: center;
     column-gap: 0.5rem;

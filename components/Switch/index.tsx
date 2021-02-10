@@ -20,7 +20,7 @@ export const Switch: React.FC<SwitchProps> = ({
     const [isFocused, setIsFocused] = useState<boolean>(false);
     const ref = useRef<HTMLInputElement>(null);
 
-    const active = ref.current?.checked ?? false;
+    const active = (ref.current?.checked ?? false) || value === true;
 
     const disabled = (
         <svg
@@ -29,6 +29,7 @@ export const Switch: React.FC<SwitchProps> = ({
             viewBox="0 0 40 20"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            className={styles.svg}
         >
             <rect width="40" height="20" rx="10" fill="#C8C6C4" />
             <circle cx="30" cy="10" r="6" fill="#F3F2F1" />
@@ -113,7 +114,6 @@ export const Switch: React.FC<SwitchProps> = ({
                 className={styles.switch}
                 value={value?.toString()}
                 onFocus={(e) => {
-                    console.log("Focused Switch:", e);
                     setIsFocused(true);
                     if (onFocus) {
                         onFocus(e);

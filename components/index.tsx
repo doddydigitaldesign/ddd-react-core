@@ -1,6 +1,7 @@
 export { Accordion } from "./Accordion";
 export { Button } from "./Button";
 export { Centered } from "./Centered";
+export { Checkbox } from "./Checkbox";
 export { Column } from "./Column";
 export { Form } from "./Form";
 export { Grid } from "./Grid";

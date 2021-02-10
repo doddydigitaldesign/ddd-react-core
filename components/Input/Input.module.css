@@ -7,7 +7,7 @@
     align-items: flex-start;
     padding: 0.4rem 0.5rem;
     background: #ffffff;
-    border: 1px solid var(--border-light);
+    border: 1px solid var(--border);
     box-sizing: border-box;
     border-radius: 0.25rem;
     line-height: 1.5rem;
@@ -47,19 +47,4 @@
     position: relative;
     top: -2rem;
     z-index: 1;
-}
-
-.checkMarkVisible {
-    fill: var(--bg-primary);
-}
-
-.checkMarkHidden {
-    fill: var(--text-primary);
-}
-
-.input[type="checkbox"] {
-    width: 1rem;
-    height: 1rem;
-    appearance: none;
-    border: none;
 }
