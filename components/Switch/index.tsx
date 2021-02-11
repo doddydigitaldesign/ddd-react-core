@@ -29,7 +29,7 @@ export const Switch: React.FC<SwitchProps> = ({
             viewBox="0 0 40 20"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className={styles.svg}
+            className={styles.svgDisabled}
         >
             <rect width="40" height="20" rx="10" fill="#C8C6C4" />
             <circle cx="30" cy="10" r="6" fill="#F3F2F1" />

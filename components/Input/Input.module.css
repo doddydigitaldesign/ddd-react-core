@@ -15,13 +15,15 @@
 }
 
 .success {
-    border-bottom-width: 2px;
-    border-bottom-color: var(--bg-success);
+    border-color: var(--bg-success);
 }
 
 .error {
-    border-bottom-width: 2px;
-    border-bottom-color: var(--bg-error);
+    border-color: var(--bg-error);
+}
+
+.input:focus {
+    border-width: 2px;
 }
 
 .label {

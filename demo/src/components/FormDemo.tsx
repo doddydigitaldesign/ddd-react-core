@@ -42,168 +42,173 @@ const FormDemo: React.FC = () => {
     const [formValidity, setFormValidity] = useState<boolean>(false);
 
     return (
-        <Paper>
-            <Grid>
-                <Row>
-                    <Column start={1} end={12}>
-                        <Text variant={"h1"}>Forms</Text>
-                    </Column>
-                </Row>
-                <Column start={1} end={6}>
-                    <Form
-                        onChange={(e) => {
-                            const target = e.target as HTMLInputElement;
-                            setValues({
-                                ...values,
-                                [target.id]:
-                                    target.type === "checkbox"
-                                        ? target.checked
-                                        : target.value,
-                            });
-                            setFormValidity(e.currentTarget.checkValidity());
-                        }}
-                        id={"FormDemo"}
-                    >
-                        <Row>
-                            <Column start={3} end={7}>
-                                <Input
-                                    id={FormDemoIds.Numeric}
-                                    value={values[FormDemoIds.Numeric]}
-                                    label={"Numeric"}
-                                    type={"number"}
-                                    required
-                                />
-                            </Column>
-                        </Row>
-                        <Row>
-                            <Column start={3} end={7}>
-                                <Input
-                                    id={FormDemoIds.NoValidation}
-                                    value={values[FormDemoIds.NoValidation]}
-                                    label={"No validation"}
-                                />
-                            </Column>
-                        </Row>
-                        <Row>
-                            <Column start={3} end={7}>
-                                <Input
-                                    id={FormDemoIds.AwesomeValidator}
-                                    value={values[FormDemoIds.AwesomeValidator]}
-                                    label={'"Awesome" validator'}
-                                    pattern={"Awesome"}
-                                    required
-                                />
-                            </Column>
-                        </Row>
-                        <Row>
-                            <Column start={3} end={12}>
-                                <Checkbox
-                                    label={"Checkbox Normal"}
-                                    id={FormDemoIds.CheckboxNormal}
-                                    value={values[FormDemoIds.CheckboxNormal]}
-                                />
-                                <Checkbox
-                                    label={"Checkbox Checked"}
-                                    id={FormDemoIds.CheckboxChecked}
-                                    value={values[FormDemoIds.CheckboxChecked]}
-                                />
-                                <Checkbox
-                                    label={"Checkbox Indeterminate"}
-                                    id={FormDemoIds.CheckboxIndeterminate}
-                                    value={
-                                        values[
-                                            FormDemoIds.CheckboxIndeterminate
-                                        ] as boolean | "indeterminate"
-                                    }
-                                />
-                                <Checkbox
-                                    label={"Checkbox Disabled"}
-                                    id={FormDemoIds.CheckboxDisabled}
-                                    value={values[FormDemoIds.CheckboxDisabled]}
-                                    disabled
-                                />
-                            </Column>
-                        </Row>
-                        <Row>
-                            <Column start={3} end={7}>
-                                <Switch
-                                    id={FormDemoIds.SwitchNormal}
-                                    label={"Switch Normal"}
-                                    checked={!!values[FormDemoIds.SwitchNormal]}
-                                    onClick={() => {
-                                        setValues({
-                                            ...values,
-                                            [FormDemoIds.SwitchNormal]: !values[
-                                                FormDemoIds.SwitchNormal
-                                            ],
-                                        });
-                                    }}
-                                />
-                                <Switch
-                                    id={FormDemoIds.SwitchActive}
-                                    label={"Switch Active"}
-                                    checked={values[FormDemoIds.SwitchActive]}
-                                    value={values[FormDemoIds.SwitchActive]}
-                                    onClick={() => {
-                                        setValues({
-                                            ...values,
-                                            [FormDemoIds.SwitchActive]: !values[
-                                                FormDemoIds.SwitchActive
-                                            ],
-                                        });
-                                    }}
-                                />
-                                <Switch
-                                    id={FormDemoIds.SwitchDisabled}
-                                    label={"Switch Disabled"}
-                                    checked={
-                                        !!values[FormDemoIds.SwitchDisabled]
-                                    }
-                                    value={values[FormDemoIds.SwitchActive]}
-                                    disabled
-                                    onClick={() => {
-                                        setValues({
-                                            ...values,
-                                            [FormDemoIds.SwitchDisabled]: !values[
-                                                FormDemoIds.SwitchDisabled
-                                            ],
-                                        });
-                                    }}
-                                />
-                            </Column>
-                        </Row>
-                        <Row>
-                            <Column start={1} end={13}>
-                                <Button
-                                    disabled={!formValidity}
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        alert(
-                                            "Form validity: " +
-                                                formValidity +
-                                                "\nValues: \n" +
-                                                Object.entries(values)
-                                                    .map(
-                                                        ([key, value]) =>
-                                                            `${key}: ${value}\n`,
-                                                    )
-                                                    .join(""),
-                                        );
-                                    }}
-                                >
-                                    Submit
-                                </Button>
-                            </Column>
-                        </Row>
-                    </Form>
-                </Column>
-                <Column start={6} end={13}>
-                    <Text variant={"p"}>
-                        Form Validity: {formValidity ? "✅" : "❌"}
-                    </Text>
-                </Column>
-            </Grid>
-        </Paper>
+        <Form
+            onChange={(e) => {
+                const target = e.target as HTMLInputElement;
+                setValues({
+                    ...values,
+                    [target.id]:
+                        target.type === "checkbox"
+                            ? target.checked
+                            : target.value,
+                });
+                setFormValidity(e.currentTarget.checkValidity());
+            }}
+            id={"FormDemo"}
+        >
+            <Paper>
+                <Grid colcount={1}>
+                    <Row rowIndex={1}>
+                        <Column start={1} end={12}>
+                            <Text variant={"h2"}>Input</Text>
+                        </Column>
+                    </Row>
+                    <Row rowIndex={2}>
+                        <Column start={1} end={4} colindex={1}>
+                            <Input
+                                id={FormDemoIds.Numeric}
+                                value={values[FormDemoIds.Numeric]}
+                                label={"Numeric"}
+                                type={"number"}
+                                required
+                            />
+                        </Column>
+                        <Column start={4} end={8} colindex={2}>
+                            <Input
+                                id={FormDemoIds.NoValidation}
+                                value={values[FormDemoIds.NoValidation]}
+                                label={"No validation"}
+                            />
+                        </Column>
+                        <Column start={8} end={12} colindex={3}>
+                            <Input
+                                id={FormDemoIds.AwesomeValidator}
+                                value={values[FormDemoIds.AwesomeValidator]}
+                                label={'"Awesome" validator'}
+                                pattern={"Awesome"}
+                                required
+                            />
+                        </Column>
+                    </Row>
+                    <Row rowIndex={3}>
+                        <Column start={1} end={12}>
+                            <Text variant={"h2"}>Checkbox</Text>
+                        </Column>
+                    </Row>
+                    <Row rowIndex={4}>
+                        <Column start={1} end={3} colindex={1}>
+                            <Checkbox
+                                label={"Checkbox Normal"}
+                                id={FormDemoIds.CheckboxNormal}
+                                value={values[FormDemoIds.CheckboxNormal]}
+                            />
+                        </Column>
+                        <Column start={3} end={6} colindex={2}>
+                            <Checkbox
+                                label={"Checkbox Checked"}
+                                id={FormDemoIds.CheckboxChecked}
+                                value={values[FormDemoIds.CheckboxChecked]}
+                            />
+                        </Column>
+                        <Column start={6} end={9} colindex={3}>
+                            <Checkbox
+                                label={"Checkbox Indeterminate"}
+                                id={FormDemoIds.CheckboxIndeterminate}
+                                value={
+                                    values[
+                                        FormDemoIds.CheckboxIndeterminate
+                                    ] as boolean | "indeterminate"
+                                }
+                            />
+                        </Column>
+                        <Column start={9} end={13} colindex={4}>
+                            <Checkbox
+                                label={"Checkbox Disabled"}
+                                id={FormDemoIds.CheckboxDisabled}
+                                value={values[FormDemoIds.CheckboxDisabled]}
+                                disabled
+                            />
+                        </Column>
+                    </Row>
+                    <Row rowIndex={5}>
+                        <Column start={1} end={12}>
+                            <Text variant={"h2"}>Switch</Text>
+                        </Column>
+                    </Row>
+                    <Row rowIndex={6}>
+                        <Column start={1} end={4} colindex={1}>
+                            <Switch
+                                id={FormDemoIds.SwitchNormal}
+                                label={"Switch Normal"}
+                                checked={!!values[FormDemoIds.SwitchNormal]}
+                                onClick={() => {
+                                    setValues({
+                                        ...values,
+                                        [FormDemoIds.SwitchNormal]: !values[
+                                            FormDemoIds.SwitchNormal
+                                        ],
+                                    });
+                                }}
+                            />
+                        </Column>
+                        <Column start={4} end={8} colindex={1}>
+                            <Switch
+                                id={FormDemoIds.SwitchActive}
+                                label={"Switch Active"}
+                                checked={values[FormDemoIds.SwitchActive]}
+                                value={values[FormDemoIds.SwitchActive]}
+                                onClick={() => {
+                                    setValues({
+                                        ...values,
+                                        [FormDemoIds.SwitchActive]: !values[
+                                            FormDemoIds.SwitchActive
+                                        ],
+                                    });
+                                }}
+                            />
+                        </Column>
+                        <Column start={8} end={13} colindex={1}>
+                            <Switch
+                                id={FormDemoIds.SwitchDisabled}
+                                label={"Switch Disabled"}
+                                checked={!!values[FormDemoIds.SwitchDisabled]}
+                                value={values[FormDemoIds.SwitchActive]}
+                                disabled
+                                onClick={() => {
+                                    setValues({
+                                        ...values,
+                                        [FormDemoIds.SwitchDisabled]: !values[
+                                            FormDemoIds.SwitchDisabled
+                                        ],
+                                    });
+                                }}
+                            />
+                        </Column>
+                    </Row>
+                    <Row rowIndex={7}>
+                        <Button
+                            disabled={!formValidity}
+                            onClick={(e) => {
+                                e.preventDefault();
+                                alert(
+                                    "Form validity: " +
+                                        formValidity +
+                                        "\nValues: \n" +
+                                        Object.entries(values)
+                                            .map(
+                                                ([key, value]) =>
+                                                    `${key}: ${value}\n`,
+                                            )
+                                            .join(""),
+                                );
+                            }}
+                        >
+                            Submit
+                        </Button>
+                    </Row>
+                </Grid>
+            </Paper>
+        </Form>
     );
 };
 
