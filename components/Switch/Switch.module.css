@@ -20,6 +20,10 @@
     grid-area: switch;
 }
 
+.svgDisabled {
+    grid-area: switch;
+}
+
 .label {
     grid-area: label;
     font-style: normal;
@@ -31,7 +35,7 @@
     display: grid;
     min-width: 3rem;
     grid-template-areas: "switch label";
-    grid-template-columns: "2.5rem auto";
+    grid-template-columns: repeat(2, min-content);
     justify-content: start;
     align-content: center;
     column-gap: 0.5rem;
@@ -42,7 +46,7 @@
 }
 
 .rectFocused,
-.wrapper:hover > svg > .rect {
+svg:hover > .rect {
     stroke: var(--border-active);
 }
 
@@ -73,4 +77,8 @@ svg:hover > .toggleKnob {
 .toggleKnobActiveFocused,
 svg:hover > .toggleKnobActive {
     fill: var(--bg-light);
+}
+
+.svg:focus > .rect {
+    filter: drop-shadow(16px 16px 20px black);
 }

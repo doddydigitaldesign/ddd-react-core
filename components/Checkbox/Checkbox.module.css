@@ -1,0 +1,46 @@
+.checkbox {
+    appearance: none;
+}
+
+.svg {
+    cursor: pointer;
+    grid-area: checkbox;
+}
+.svgDisabled {
+    cursor: unset;
+    grid-area: checkbox;
+}
+
+.label {
+    grid-area: label;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.wrapper {
+    display: grid;
+    min-width: 1.5rem;
+    grid-template-areas: "checkbox label";
+    grid-template-columns: repeat(2, min-content);
+    justify-content: start;
+    align-content: center;
+    column-gap: 0.5rem;
+}
+
+.rect:hover,
+.rectFocused {
+    border: 1px solid #323130;
+    box-sizing: border-box;
+    border-radius: 2px;
+    color: #605e5c;
+}
+
+.rectActive:hover,
+.rectActiveFocused {
+    fill: hsla(208, 84%, 40%, 100%);
+}
+
+svg:hover > .checkMark {
+    fill: #605e5c;
+}

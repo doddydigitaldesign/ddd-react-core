@@ -1,14 +1,28 @@
 @import "../shared/resets.css";
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-auto-rows: minmax(3rem, auto);
-    width: 100%;
+@media screen and (max-width: 768px) {
+    .grid {
+        display: grid;
+        gap: 1rem;
+        grid-auto-rows: minmax(3rem, auto);
+
+        grid-auto-columns: 1fr;
+    }
+    .grid > div[role="row"] {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
 }
 
-@media (max-width: 768px) {
-    .grid {
-        grid-template-columns: 1fr;
+@media screen and (min-width: 769px) {
+    .grid > div[role="row"] {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 1rem;
+    }
+
+    .grid > div[role="row"] > div[role="gridcell"] {
+        place-content: center;
     }
 }
