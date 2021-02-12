@@ -10,6 +10,7 @@ import {
     Row,
     Switch,
     Text,
+    TextArea,
 } from "../../../components";
 
 enum FormDemoIds {
@@ -22,7 +23,8 @@ enum FormDemoIds {
     CheckboxDisabled = "CheckboxDisabled",
     SwitchNormal = "SwitchNormal",
     SwitchActive = "SwitchActive",
-    SwitchDisabled = "Switch",
+    SwitchDisabled = "SwitchDisabled",
+    TextAreaNormal = "TextAreaNormal",
 }
 
 const FormDemo: React.FC = () => {
@@ -37,6 +39,7 @@ const FormDemo: React.FC = () => {
         [FormDemoIds.SwitchNormal]: false,
         [FormDemoIds.SwitchActive]: true,
         [FormDemoIds.SwitchDisabled]: true,
+        [FormDemoIds.TextAreaNormal]: "",
     });
 
     const [formValidity, setFormValidity] = useState<boolean>(false);
@@ -186,6 +189,16 @@ const FormDemo: React.FC = () => {
                         </Column>
                     </Row>
                     <Row rowIndex={7}>
+                        <Column span={7} colindex={1}>
+                            <TextArea
+                                label={"TextArea Normal"}
+                                id={FormDemoIds.TextAreaNormal}
+                                minLength={5}
+                                required
+                            />
+                        </Column>
+                    </Row>
+                    <Row>
                         <Button
                             disabled={!formValidity}
                             onClick={(e) => {
