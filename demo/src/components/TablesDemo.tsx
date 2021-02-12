@@ -253,8 +253,8 @@ export const TablesDemo: React.FC = () => {
                 TableDataCell components make it easy to construct tables.
             </Text>
 
-            <Table>
-                <TableHead caption={"Table #1"}>
+            <Table caption={"Table #1"}>
+                <TableHead>
                     <TableRow>
                         <TableHeadCell>
                             <Text variant={"h6"}>Id</Text>

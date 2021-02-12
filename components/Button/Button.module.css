@@ -28,7 +28,8 @@
         var(--bg-primary);
     color: hsla(0, 0%, 100%, 100%);
 }
-.primary:hover {
+.primary:hover,
+.primary:focus {
     background: var(--bg-primary);
 }
 .success {
@@ -40,7 +41,8 @@
         var(--bg-success);
     color: hsla(0, 0%, 100%, 100%);
 }
-.success:hover {
+.success:hover,
+.success:focus {
     background: var(--bg-success);
 }
 
@@ -53,7 +55,8 @@
         var(--bg-error);
     color: hsla(0, 0%, 100%, 100%);
 }
-.error:hover {
+.error:hover,
+.error:focus {
     background: var(--bg-error);
 }
 

@@ -1,0 +1,26 @@
+@import "../shared/colors.css";
+
+.wrapper {
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+}
+
+.button {
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.button:hover,
+.button:focus {
+    background-color: var(--button-emphasis);
+}
+
+.button > svg {
+    stroke: var(--bg-primary);
+    height: 2rem;
+    width: 2rem;
+}
