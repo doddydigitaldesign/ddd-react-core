@@ -7,8 +7,8 @@ render(
     <NavigationProvider
         navItems={[
             { active: false, id: "layout" },
-            { active: false, id: "buttons" },
-            { active: true, id: "forms" },
+            { active: true, id: "buttons" },
+            { active: false, id: "forms" },
             { active: false, id: "text" },
             { active: false, id: "table" },
         ]}

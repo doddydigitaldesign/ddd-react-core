@@ -19,4 +19,5 @@
 
     /* Interactivity colors */
     --hover: hsla(0, 0%, 90%, 100%);
+    --button-emphasis: hsla(0, 2%, 91%, 100%);
 }
