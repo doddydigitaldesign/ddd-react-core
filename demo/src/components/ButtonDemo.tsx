@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+/* eslint-disable @typescript-eslint/no-empty-function */
+import React from "react";
 import {
     ChevronDown,
     ChevronUp,
@@ -13,7 +14,6 @@ import { Row } from "../../../components/Row";
 import { Text } from "../../../components/Text";
 
 export const ButtonDemo: React.FC = () => {
-    const [count, setCount] = useState(0);
     return (
         <Paper>
             <Grid colcount={1}>
@@ -25,23 +25,17 @@ export const ButtonDemo: React.FC = () => {
 
                 <Row rowIndex={2}>
                     <Column start={1} end={4} colindex={1}>
-                        <Button
-                            color={"success"}
-                            onClick={() => setCount((val) => val + 1)}
-                        >
+                        <Button color={"success"} onClick={() => {}}>
                             Increment
                         </Button>
                     </Column>
                     <Column start={4} end={8} colindex={2}>
-                        <Button
-                            color={"primary"}
-                            onClick={() => setCount((val) => val - 1)}
-                        >
+                        <Button color={"primary"} onClick={() => {}}>
                             Decrement
                         </Button>
                     </Column>
                     <Column start={8} end={12} colindex={3}>
-                        <Button color={"error"} onClick={() => setCount(0)}>
+                        <Button color={"error"} onClick={() => {}}>
                             Reset
                         </Button>
                     </Column>
@@ -62,6 +56,7 @@ export const ButtonDemo: React.FC = () => {
                                     style={{ stroke: "var(--bg-success)" }}
                                 />
                             }
+                            onClick={() => {}}
                         />
                     </Column>
                     <Column start={4} end={8} colindex={2}>
@@ -76,6 +71,7 @@ export const ButtonDemo: React.FC = () => {
                                     }}
                                 />
                             }
+                            onClick={() => {}}
                         />
                     </Column>
                     <Column start={8} end={12} colindex={3}>
@@ -83,6 +79,7 @@ export const ButtonDemo: React.FC = () => {
                             id={"icon-button-chevron-up"}
                             label={"Increase"}
                             icon={<ChevronUp />}
+                            onClick={() => {}}
                         />
                     </Column>
                 </Row>
