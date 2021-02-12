@@ -1,3 +1,6 @@
+import styles from "./shared/resets.css";
+styles;
+
 export { Accordion } from "./Accordion";
 export { Button } from "./Button";
 export { Centered } from "./Centered";

@@ -1,18 +1,22 @@
 @import "../shared/colors.css";
 
 .item {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    max-width: 100%;
+    max-height: 100%;
+    display: grid;
+    place-content: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 0.5rem;
 }
 
 .active {
     background-color: var(--bg-primary);
     color: hsla(0, 0%, 100%, 100%);
 }
-
-.wrapper {
-    display: grid;
-    place-items: center;
+.item:hover:not(.active),
+.item:focus:not(.active) {
+    background-color: var(--button-emphasis);
 }
