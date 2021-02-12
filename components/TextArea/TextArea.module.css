@@ -16,14 +16,6 @@
     padding: 1rem;
 }
 
-.textArea:valid {
-    border-color: var(--bg-success);
-}
-
-.textArea:invalid {
-    border-color: var(--bg-error);
-}
-
 .textArea:focus {
     border-width: 2px;
 }
@@ -46,14 +38,30 @@
     width: 100%;
 }
 
-.wrapper > .checkMark {
-    width: 2rem;
-    height: 2rem;
-    position: relative;
-    top: -2rem;
-    z-index: 1;
+.validation:valid {
+    border-color: var(--bg-success);
 }
 
+.validation:invalid {
+    border-color: var(--bg-error);
+}
+
+.lengthIndicator {
+    font-size: smaller;
+    width: 100%;
+    text-align: end;
+    padding-top: 0.25rem;
+}
+
+.validation:invalid + .lengthIndicator {
+    color: var(--bg-error);
+}
+
+.validation:valid + .lengthIndicator {
+    color: var(--bg-success);
+}
+
+/* Reset browser defaults */
 textarea {
     -webkit-writing-mode: horizontal-tb !important;
     writing-mode: horizontal-tb;

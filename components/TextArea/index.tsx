@@ -1,13 +1,14 @@
-import React, { TextareaHTMLAttributes } from "react";
+import React, { TextareaHTMLAttributes, useState } from "react";
 import classNames from "../../lib/utils/classNames";
 import styles from "./TextArea.module.css";
 
-interface TextAreaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
+interface TextAreaProps
+    extends Omit<TextareaHTMLAttributes<HTMLTextAreaElement>, "value"> {
     label: string;
     id: string;
     rows?: number;
-    maxlength?: number;
-    minlength?: number;
+    value?: string;
+    hasValidation?: boolean;
 }
 
 export const TextArea: React.FC<TextAreaProps> = ({
@@ -15,20 +16,46 @@ export const TextArea: React.FC<TextAreaProps> = ({
     id,
     className,
     rows,
+    onChange,
+    value,
+    hasValidation,
     ...rest
 }) => {
+    const [internalValue, setInternalValue] = useState("");
     return (
-        <div className={classNames(styles.wrapper, className)}>
+        <div className={classNames(styles.wrapper)}>
             <label className={styles.label} htmlFor={id}>
                 {label}
             </label>
             <textarea
                 autoComplete={"off"}
-                className={styles.textArea}
+                className={classNames(
+                    styles.textArea,
+                    {
+                        [styles.validation]:
+                            hasValidation ||
+                            rest.required ||
+                            typeof rest.maxLength === "number" ||
+                            typeof rest.minLength === "number",
+                    },
+                    className,
+                )}
                 rows={rows ?? 8}
                 id={id}
+                value={value ?? internalValue}
+                onChange={(e) => {
+                    setInternalValue(e.target.value);
+                    if (onChange) {
+                        onChange(e);
+                    }
+                }}
                 {...rest}
             />
+            {(rest.maxLength ?? -1) >= 0 && (
+                <span className={classNames(styles.lengthIndicator)}>
+                    {(value ?? internalValue).length} / {rest.maxLength}
+                </span>
+            )}
         </div>
     );
 };
