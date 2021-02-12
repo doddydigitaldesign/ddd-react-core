@@ -1,0 +1,93 @@
+@import "../shared/colors.css";
+@import "../shared/typography.css";
+
+.textArea {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.4rem 0.5rem;
+    background: #ffffff;
+    box-sizing: border-box;
+    border: 1px solid var(--border);
+    border-radius: 0.25rem;
+    line-height: 1.5rem;
+    color: var(--text-primary);
+    min-width: 100%;
+    padding: 1rem;
+}
+
+.textArea:focus {
+    border-width: 2px;
+}
+
+.label {
+    font-style: normal;
+    font-weight: 600;
+    color: hsla(30, 3%, 12%, 100%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.5rem 0px 0.5rem 0px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 0px;
+    width: 100%;
+}
+
+.validation:valid {
+    border-color: var(--bg-success);
+}
+
+.validation:invalid {
+    border-color: var(--bg-error);
+}
+
+.lengthIndicator {
+    font-size: smaller;
+    width: 100%;
+    text-align: end;
+    padding-top: 0.25rem;
+}
+
+.validation:invalid + .lengthIndicator {
+    color: var(--bg-error);
+}
+
+.validation:valid + .lengthIndicator {
+    color: var(--bg-success);
+}
+
+/* Reset browser defaults */
+textarea {
+    -webkit-writing-mode: horizontal-tb !important;
+    writing-mode: horizontal-tb;
+    text-rendering: auto;
+    color: unset;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: unset;
+    text-align: start;
+    appearance: unset;
+    background-color: unset;
+    -webkit-rtl-ordering: logical;
+    flex-direction: unset;
+    resize: unset;
+    cursor: text;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    column-count: unset !important;
+    margin: unset;
+    font: unset;
+    /* border-width: unset;
+    border-style: unset;
+    border-color: unset; */
+    border-image: unset;
+    padding: unset;
+}

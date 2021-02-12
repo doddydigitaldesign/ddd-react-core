@@ -10,6 +10,7 @@ import {
     Row,
     Switch,
     Text,
+    TextArea,
 } from "../../../components";
 
 enum FormDemoIds {
@@ -22,7 +23,9 @@ enum FormDemoIds {
     CheckboxDisabled = "CheckboxDisabled",
     SwitchNormal = "SwitchNormal",
     SwitchActive = "SwitchActive",
-    SwitchDisabled = "Switch",
+    SwitchDisabled = "SwitchDisabled",
+    TextAreaNormal = "TextAreaNormal",
+    TextAreaMaxLength = "TextAreaMaxLength",
 }
 
 const FormDemo: React.FC = () => {
@@ -37,6 +40,8 @@ const FormDemo: React.FC = () => {
         [FormDemoIds.SwitchNormal]: false,
         [FormDemoIds.SwitchActive]: true,
         [FormDemoIds.SwitchDisabled]: true,
+        [FormDemoIds.TextAreaNormal]: "",
+        [FormDemoIds.TextAreaMaxLength]: "",
     });
 
     const [formValidity, setFormValidity] = useState<boolean>(false);
@@ -186,6 +191,28 @@ const FormDemo: React.FC = () => {
                         </Column>
                     </Row>
                     <Row rowIndex={7}>
+                        <Column start={1} end={12}>
+                            <Text variant={"h2"}>TextArea</Text>
+                        </Column>
+                    </Row>
+                    <Row rowIndex={8}>
+                        <Column span={5} colindex={1}>
+                            <TextArea
+                                label={"TextArea Normal"}
+                                id={FormDemoIds.TextAreaNormal}
+                            />
+                        </Column>
+                        <Column span={5} colindex={2}>
+                            <TextArea
+                                label={"TextArea Max Length"}
+                                id={FormDemoIds.TextAreaMaxLength}
+                                minLength={5}
+                                maxLength={120}
+                                required
+                            />
+                        </Column>
+                    </Row>
+                    <Row>
                         <Button
                             disabled={!formValidity}
                             onClick={(e) => {

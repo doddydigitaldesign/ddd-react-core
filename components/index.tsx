@@ -20,3 +20,4 @@ export { TableHead } from "./TableHead";
 export { TableHeadCell } from "./TableHeadCell";
 export { TableRow } from "./TableRow";
 export { Text } from "./Text";
+export { TextArea } from "./TextArea";
